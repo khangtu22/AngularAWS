@@ -11,3 +11,13 @@
         <strong>You said: </strong> {{name}}
     </p>
 </div>
+
+<div class="play-container">
+    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+        <p>The click counter is greater than 4</p>
+    </ng-template>
+
+    <ng-template #none>
+        <p>The click counter is not greater than 4</p>
+    </ng-template>
+</div>
